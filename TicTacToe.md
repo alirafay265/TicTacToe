@@ -10,7 +10,7 @@
    - Download and install Dev C++ from [here](https://sourceforge.net/projects/orwelldevcpp/).
 
 2. **Clone the Repository**
-   - Clone this repository to your local machine using:
+   - Clone this repository to your local machine using:<br>
      ```bash
      git clone https://github.com/alirafay265/myprojects.git
      ```
@@ -47,4 +47,6 @@ The purpose of this program is to enable the user to play a competitive, conveni
 •	The user can track his scores.
 <h2>Account Registration</h2>
 •	The user can register an account so that his score is stored for the next time he runs the program.<br>
+
+<p>Thankyou for your time and happy coding!</p>
 •	The user can log in to his account to continue playing the game with his previous scores.
