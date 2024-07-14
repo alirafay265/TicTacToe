@@ -1,5 +1,3 @@
-# myprojects
-
 # Welcome to My Programming Journey!
 
 This repository marks the beginning of my exciting adventure into the world of programming. Here, you will find a collection of beginner-level projects that I have created while learning various programming languages. As I progress, I will continue to add more projects, showcasing my growth and understanding of different concepts.
@@ -50,4 +48,5 @@ If you have any questions or just want to connect, you can reach me at:
 
 Thank you for visiting my repository. Happy coding!
 
----</p>
+---
+</p>
