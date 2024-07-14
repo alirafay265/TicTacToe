@@ -1,4 +1,29 @@
 # Tic-Tac-Toe Game
+
+## Note
+
+<span>**This program will only run in Dev C++**</span>
+
+## Instructions to Run the Program
+
+1. **Install Dev C++**
+   - Download and install Dev C++ from [here](https://sourceforge.net/projects/orwelldevcpp/).
+
+2. **Clone the Repository**
+   - Clone this repository to your local machine using:
+     ```bash
+     git clone https://github.com/alirafay265/myprojects.git
+     ```
+
+3. **Open the Project in Dev C++**
+   - Open Dev C++.
+   - Go to `File` -> `Open Project or File`.
+   - Navigate to the cloned repository and select the project file (`tic-tac-toe.c`).
+
+4. **Compile and Run the Program**
+   - Click on `Execute` -> `Compile & Run`.
+   - Follow the on-screen instructions to play the game.
+
 <h1>Abstract</h1>
 Tic-Tac-Toe Game is a simple and fun game played by two players using O’s and X’s. It consists of 9 slots separated by lines. The purpose of the game is to get 3 consecutive O’s or X’s in a line, diagonal or straight. Whoever achieves this goal first, wins.
 We have created a Tic-Tac-Toe Game Program in Dev C++ using C Programming Language. It is played by one user and the computer. We have integrated algorithms to enable the computer to play tactically and win if the user makes a wrong move. We have set up a login system where users can register an account, play the game, track their scores, and log in any time they want. For this purpose, we have made use of a database by utilizing file handling and data entry. 
@@ -23,27 +48,3 @@ The purpose of this program is to enable the user to play a competitive, conveni
 <h2>Account Registration</h2>
 •	The user can register an account so that his score is stored for the next time he runs the program.<br>
 •	The user can log in to his account to continue playing the game with his previous scores.
-
-## Note
-
-<span style="color:red;">**This program will only run in Dev C++**</span>
-
-## Instructions to Run the Program
-
-1. **Install Dev C++**
-   - Download and install Dev C++ from [here](https://sourceforge.net/projects/orwelldevcpp/).
-
-2. **Clone the Repository**
-   - Clone this repository to your local machine using:
-     ```bash
-     git clone https://github.com/yourusername/tic-tac-toe-project.git
-     ```
-
-3. **Open the Project in Dev C++**
-   - Open Dev C++.
-   - Go to `File` -> `Open Project or File`.
-   - Navigate to the cloned repository and select the project file (`tic-tac-toe.c`).
-
-4. **Compile and Run the Program**
-   - Click on `Execute` -> `Compile & Run`.
-   - Follow the on-screen instructions to play the game.
