@@ -2,7 +2,7 @@
 
 ## Note
 
-<span>**This program will only run in Dev C++**</span>
+<span>**This program will currently only run in Dev C++**</span>
 
 ## Instructions to Run the Program
 
@@ -18,7 +18,7 @@
 3. **Open the Project in Dev C++**
    - Open Dev C++.
    - Go to `File` -> `Open Project or File`.
-   - Navigate to the cloned repository and select the project file (`tic-tac-toe.c`).
+   - Navigate to the cloned repository and select the project file (`TicTacToe.c`).
 
 4. **Compile and Run the Program**
    - Click on `Execute` -> `Compile & Run`.
