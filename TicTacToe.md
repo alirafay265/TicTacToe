@@ -12,7 +12,7 @@ The purpose of this program is to enable the user to play a competitive, conveni
 <h2>Gameplay Options</h2>
 •	The user can choose to keep playing or end the program.<br>
 •	The user can take their turn to mark one of the slots with their symbol.
-<h2>Input Validation</h2
+<h2>Input Validation</h2>
 •	The program validates the input of the user to make sure they are within the bounds of the 3x3 grid and on empty slots.
 <h2>Detection of Wins and Ties</h2>
 •	The program looks for 3 consecutive symbols in a straight line or diagonally to check for winning combinations.<br>
