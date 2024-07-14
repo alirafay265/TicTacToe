@@ -1,3 +1,4 @@
+// THIS CODE WAS MADE ON DEV C++ AND WILL NOT RUN PROPERLY ON VSCODE
 // made by Ali Rafay, Bilal Sarwar, Hadi Sohail on 29th April, 2024
 // edited by Ali Rafay, Bilal Sarwar on 17th May, 2024
 // edited by Hadi Sohail, Ali Rafay on 24th May, 2024
