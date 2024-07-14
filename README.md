@@ -10,7 +10,8 @@ In this repository, you will find projects implemented in the following language
 - **C**
 - **C++**
 - **Java**
-- **JavaScript**
+- **HTML, CSS, JavaScript**
+- more
 
 Each project is designed to reinforce fundamental concepts and improve my coding skills. I hope to document my learning process and share my progress with the community.
 
@@ -32,7 +33,7 @@ To get started with any of the projects, follow the instructions provided in the
 
 2. Navigate to the directory of the project you are interested in:
    ```bash
-   cd your-repository-name/project-directory
+   cd myprojects/project-directory
    ```
 
 3. Follow the specific instructions provided in the project README to compile and run the code.
@@ -49,6 +50,4 @@ If you have any questions or just want to connect, you can reach me at:
 
 Thank you for visiting my repository. Happy coding!
 
----
-
-Feel free to customize the template further based on your preferences and specific details about your projects.</p>
+---</p>
