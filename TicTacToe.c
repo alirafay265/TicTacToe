@@ -1,4 +1,3 @@
-// THIS CODE WAS MADE ON DEV C++ AND WILL NOT RUN PROPERLY ON VSCODE
 // made by Ali Rafay, Bilal Sarwar, Hadi Sohail on 29th April, 2024
 // edited by Ali Rafay, Bilal Sarwar on 17th May, 2024
 // edited by Hadi Sohail, Ali Rafay on 24th May, 2024
@@ -7,21 +6,12 @@
 #include <conio.h> 
 #include <stdlib.h> // for rand function
 #include <stdbool.h> // for boolean type functions and variables
-#include <windows.h> // to change the size of the ouput window
 #include <string.h> // for string functions
 
 #define SIZE 4 // constant size for tic-tac-toe board
 #define MAX_LENGTH 50 // constant max length for strings
 
-// struct to hold username and password of user
-typedef struct {
-    char username[MAX_LENGTH];
-    char password[MAX_LENGTH];
-} Account;
-
 // prototypes for functions defined below main function
-void MaximizeOutputWindow(void);
-void RestoreOutputWindow(void);
 void registerAccount();
 void login();
 void updateScore(char username[], int change);
@@ -42,8 +32,6 @@ char loggedInUser[MAX_LENGTH]; // variable of the logged in user, contains usern
 // main function
 int main()
 {
-    MaximizeOutputWindow(); // makes the output window full screen
-    system("color f0"); // changes the output window color to white and font color to green
     int acc, game;
 
     printf("Welcome to Tic-Tac-Toe!\n\n");
@@ -90,7 +78,6 @@ int main()
     // sentinel loop
     while (game != 0)
     {
-        system("color f0"); // changes the background color of output window to white and font color to black
         system("cls"); // clears screen
         printf("Let's start the game!\n\n");
         printf("You are playing against an intelligent AI.\n");
@@ -149,26 +136,22 @@ int main()
     system("cls");
     printf("Thank you for your time. Goodbye!\n");
     printf("Press Enter to exit.");
-    RestoreOutputWindow(); // to restore down the output window
     getchar(); // to pause the console window
 }
 
 // registration function
 void registerAccount() 
 {
-    Account account; // create an instance of Account struct
+    char username[MAX_LENGTH], password[MAX_LENGTH]; // username and password to be entered by the user
     char fileUsername[MAX_LENGTH], filePassword[MAX_LENGTH]; // usernames and passwords which already exist in the file
     int fileScore; // scores which already exist in the file
-    
-	FILE *file = fopen("userdata.txt", "a");
-	fclose(file);
-	
-    file = fopen("userdata.txt", "r"); // opens userdata.txt for reading mode
+
+    FILE *file = fopen("userdata.txt", "r"); // opens userdata.txt for reading mode
     printf("Register your account:\n\n");
 
     printf("Enter username: ");
-    fgets(account.username, MAX_LENGTH, stdin); // takes input from user and stores it in username char array
-    account.username[strcspn(account.username, "\n")] = 0; // removes \n from the end of the username
+    fgets(username, MAX_LENGTH, stdin); // takes input from user and stores it in username char array
+    username[strcspn(username, "\n")] = 0; // removes \n from the end of the username
 
     if(file == NULL) // if file does not exist
     { 
@@ -179,7 +162,7 @@ void registerAccount()
     // to check if the username already exists
     while(fscanf(file, "%s %s %d", fileUsername, filePassword, &fileScore) != EOF) // scan username, password and score while the EOF is not reached
     { 
-        if(strcmp(account.username, fileUsername) == 0) // if the username is already taken
+        if(strcmp(username, fileUsername) == 0) // if the username is already taken
         {
             printf("\nERROR: Username already exists.\n\n"); // error is printed
             fclose(file); // closes userdata.txt file for reading mode
@@ -209,7 +192,7 @@ void registerAccount()
             } while (choice!=1 && choice!=2); // do while loop for input validation
         }
 	}
-    fclose(file); // closes file
+        fclose(file); // closes file
 
     // if username does not already exist
     file = fopen("userdata.txt", "a"); // opens userdata.txt file for appending
@@ -220,82 +203,65 @@ void registerAccount()
     }
 
     printf("Enter password: ");
-    fgets(account.password, MAX_LENGTH, stdin); // takes input from user and stores it in password char array
-    account.password[strcspn(account.password, "\n")] = 0; // removes \n character from the end of the string
+    fgets(password, MAX_LENGTH, stdin); // takes input from user and stores it in password char array
+    password[strcspn(password, "\n")] = 0; // removes \n character from the end of the string
 
-    fprintf(file, "%s %s 0\n", account.username, account.password); // initial score is set to 0
+    fprintf(file, "%s %s 0\n", username, password); // initial score is set to 0
     system("cls"); // screen is cleared
     printf("Registration successful!\n\n");
     fclose(file); // userdata.txt file for appending is closed
 }
 
+
 // login function
 void login() 
 {
-    Account account; // create an instance of Account struct
-    char fileUsername[MAX_LENGTH], filePassword[MAX_LENGTH]; // declaration of variables needed to be compared to login
+    char username[MAX_LENGTH], password[MAX_LENGTH], fileUsername[MAX_LENGTH], filePassword[MAX_LENGTH]; // declaration of variables needed to be compared to login
     int fileScore; // scores stored in userdata.txt file
 	do {
-    FILE *file = fopen("userdata.txt", "r"); // userdata.txt file is opened for reading mode
-    if(file == NULL) // if file does not exist
-    { 
-        perror("ERROR: "); // error is printed
-        printf("Press Enter to Exit.");
-        exit(0); // function is exited
+    FILE *file = fopen("userdata.txt", "r"); // opens userdata.txt file for rewading
+
+    if(file == NULL)  // if file does not exist
+	{
+        perror("ERROR: "); // error is prionted
+        exit(0); // program is exited
     }
+	printf("Login to your account\n");
 
-    printf("Login to your account:\n\n");
-
-    printf("Enter username: ");
-    fgets(account.username, MAX_LENGTH, stdin); // takes input from user and stores it in username char array
-    account.username[strcspn(account.username, "\n")] = 0; // removes \n character from the end of the string
+    printf("\nEnter username: ");
+    fgets(username, MAX_LENGTH, stdin); // takes input from user and stpres it in username character array
+    username[strcspn(username, "\n")] = 0; // removes \n character from the end of the username string
 
     printf("Enter password: ");
-    fgets(account.password, MAX_LENGTH, stdin); // takes input from user and stores it in password char array
-    account.password[strcspn(account.password, "\n")] = 0; // removes \n character from the end of the string
+    fgets(password, MAX_LENGTH, stdin); // takes input from user and stores it in password character array
+    password[strcspn(password, "\n")] = 0; // removes \n character from the end of the password string
 
-    // check if username and password match
-    while(fscanf(file, "%s %s %d", fileUsername, filePassword, &fileScore) != EOF) // while loop to scan all usernames and passwords stored in userdata.txt
-    { 
-        if(strcmp(account.username, fileUsername) == 0 && strcmp(account.password, filePassword) == 0) // if both username and password match
-        {
-            strcpy(loggedInUser, account.username); // stores the username in loggedInUser variable to access it anywhere in the code
-            system("cls"); // screen is cleared
-             printf("Login successful!\n");
-            printf("\nWelcome, %s. Your current score is %d.\n", loggedInUser, fileScore); // prints name and score
-            fclose(file); // closes userdata.txt file for reading mode
-            return; // returns control to main function
+    int found = 0; // flag variable to indicate whether the entered username exusts in the txt file
+    
+    while(fscanf(file, "%s %s %d", fileUsername, filePassword, &fileScore) != EOF) // scan username, password and score while EOF is not reached
+	{ 
+        if(strcmp(username, fileUsername) == 0 && strcmp(password, filePassword) == 0) // if username and password exists in file
+		{ 
+            found = 1; // change flag variable to 1
+            printf("\nLogin successful!\n");
+            printf("\nWelcome, %s. Your current score is %d.\n", username, fileScore); // prints name and score
+            userScore = fileScore; // takes the score stored in file and puts it in current score variable in the program
+            strcpy(loggedInUser, username); // stores the username in loggedInUser variable for updateScore function
+            fclose(file); // closes userdata.txt file for reading
+            return; // exits function
         }
     }
-    system("cls");
-    fclose(file); // closes userdata.txt file for reading mode
-    printf("ERROR: Invalid username or password.\n\n"); // error is printed
 
-	int choice;
-	do {
-    printf("Do you want to register an account or login again?\n\n1.Register \n2.Login \n\nEnter your choice: ");
-    scanf("%d", &choice);
-    getchar(); // clear the newline character from the buffer
-    if(choice == 1) 
-	{
-        system("cls");
-		return registerAccount(); // register account
-    } 
-	else if(choice == 2) 
-	{
-        system("cls");
-        break;
-    } 
-	else 
-	{
-        system("cls");
-		printf("ERROR: Invalid choice.\n\n");
-         
+    if(!found) // if username or password not found in txt file
+	{ 
+        printf("\nERROR: Invalid username or password.\n\n"); // error is printed
     }
-    } while (choice!=1 && choice!=2); // do while loop for input validation
-} while (1);
+
+    fclose(file); // closes userdata.txt file for reading
+	} while(strcmp(username, fileUsername) != 0 || strcmp(password, filePassword) != 0); // do while loop for input validation
 }
 
+// function to update the score in the text file
 void updateScore(char username[], int change) // first paramter takes username, second parameter takes change in score
 {
     FILE *file = fopen("userdata.txt", "r+"); // opens userdata.txt file for reading and writing mode
@@ -455,18 +421,4 @@ void aiMove()
     }
     else    // if board is full
         return;  // exit the function
-}
-
-// function to maximize the size of the window
-void MaximizeOutputWindow(void)
-{
-    HWND consoleWindow = GetConsoleWindow(); // this gets the value Windows uses to identify your output window
-    ShowWindow(consoleWindow, SW_MAXIMIZE);  // this mimics clicking on its' maximize button
-}
-
-// function to decrease the size of the ouput window
-void RestoreOutputWindow(void)
-{
-    HWND consoleWindow = GetConsoleWindow(); //  this gets the value windows uses to identify your output window
-    ShowWindow(consoleWindow, SW_RESTORE);   // clicks on its maximize for a second time, which puts it back to normal
 }
