@@ -4,7 +4,7 @@
 
 ## Instructions to Run the Program
 
-1. **Install Dev C++**
+1. **Install Dev C++ (or VS Code)**
    - Download and install Dev C++ from [here](https://sourceforge.net/projects/orwelldevcpp/).
 
 2. **Clone the Repository**
