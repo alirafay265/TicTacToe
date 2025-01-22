@@ -10,7 +10,7 @@
 2. **Clone the Repository**
    - Clone this repository to your local machine using:<br>
      ```bash
-     git clone https://github.com/alirafay265/myprojects.git
+     git clone https://github.com/alirafay265/TicTacToe.git
      ```
 
 3. **Open the Project in Dev C++**
