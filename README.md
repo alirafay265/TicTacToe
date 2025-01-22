@@ -1,7 +1,5 @@
 # Tic-Tac-Toe Game
 
-<span>**This program is optimised to run on Dev C++. To run optimally on VS Code or any other IDE, comment out line number 44, 45, 92, 151.**</span>
-
 ## Instructions to Run the Program
 
 1. **Install Dev C++ (or VS Code)**
