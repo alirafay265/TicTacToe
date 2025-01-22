@@ -1,6 +1,6 @@
 # Tic-Tac-Toe Game
 
-<span>**This program is optimised to run on Dev C++*. To run optimally on VS Code or any other IDE, comment out line number 44, 45, 92, 151.*</span>
+<span>**This program is optimised to run on Dev C++*. To run optimally on VS Code or any other IDE, comment out line number 44, 45, 92, 151.**</span>
 
 ## Instructions to Run the Program
 
@@ -23,7 +23,7 @@
    - Follow the on-screen instructions to play the game.
 
 <h1>Abstract</h1>
-Tic-Tac-Toe Game is a simple and fun game played by two players using O’s and X’s. It consists of 9 slots separated by lines. The purpose of the game is to get 3 consecutive O’s or X’s in a line, diagonal or straight. Whoever achieves this goal first, wins.
+Tic-Tac-Toe Game is a simple and fun game played by two players using O’s and X’s. It consists of 9 slots separated by lines. The purpose of the game is to get 3 consecutive O’s or X’s in a line, diagonal or straight. Whoever achieves this goal first, wins.\n
 We have created a Tic-Tac-Toe <b>terminal-based</b> Game in Dev C++ using C Programming Language. It is played by one user and the computer. We have integrated algorithms to enable the computer to play tactically and win if the user makes a wrong move. We have set up a login system where users can register an account, play the game, track their scores, and log in any time they want. For this purpose, we have made use of a database by utilizing file handling and data entry. 
 The purpose of this program is to enable the user to play a competitive, convenient, and fun game of Tic-Tac-Toe against the computer.
 <h1>Functionality</h1>
